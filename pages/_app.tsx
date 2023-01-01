@@ -1,3 +1,4 @@
+import "../styles/global.css";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import { Noto_Sans } from "@next/font/google";
 import NextNProgress from "nextjs-progressbar";
