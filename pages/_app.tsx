@@ -1,12 +1,9 @@
-import "../styles/global.css";
-import { ChakraProvider, extendTheme } from "@chakra-ui/react";
+import { ChakraProvider } from "@chakra-ui/react";
 import { Noto_Sans } from "@next/font/google";
 import NextNProgress from "nextjs-progressbar";
 import type { AppProps } from "next/app";
-
-const colors = {};
-
-const theme = extendTheme({ colors });
+import { theme } from "styles/chakra.config";
+import "styles/global.css";
 
 const notoSans = Noto_Sans({
   weight: ["300", "400", "700"],
@@ -15,11 +12,11 @@ const notoSans = Noto_Sans({
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <ChakraProvider theme={theme}>
-      <main className={notoSans.className}>
-        <NextNProgress />
+    <main className={notoSans.className}>
+      <NextNProgress />
+      <ChakraProvider theme={theme}>
         <Component {...pageProps} />
-      </main>
-    </ChakraProvider>
+      </ChakraProvider>
+    </main>
   );
 }
