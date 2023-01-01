@@ -1,4 +1,5 @@
 import { extendTheme } from "@chakra-ui/react";
+import { menuTheme } from "styles/custom/Menu";
 
 /**
  * 1rem = 16px
@@ -226,4 +227,7 @@ export const theme = extendTheme({
   breakpoints,
   semanticTokens,
   config,
+  components: {
+    Menu: menuTheme,
+  },
 });
