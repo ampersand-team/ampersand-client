@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Image from "next/image";
 import {
   Avatar,
   Button,
@@ -15,6 +14,8 @@ import {
 import useToggle from "hooks/useToggle";
 import { GrLogout, GrUser } from "react-icons/gr";
 import LoginModal from "components/LoginModal";
+import Link from "next/link";
+import EmblemLogo from "components/assets/EmblemLogo";
 
 interface HeaderProps {}
 
@@ -38,7 +39,9 @@ function Header({}: HeaderProps) {
       justify="space-between"
       userSelect="none"
     >
-      <Image src="emblem.svg" width={40} height={40} alt="logo" />
+      <Link href="/" aria-label="Ampersand, Back to Homepage">
+        <EmblemLogo size={40} />
+      </Link>
 
       {isLogged ? (
         <Menu autoSelect={false}>

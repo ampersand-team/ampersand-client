@@ -2,8 +2,8 @@ import { Icon, Button, Center, Text } from "@chakra-ui/react";
 import { BsGithub } from "react-icons/bs";
 import { FcGoogle } from "react-icons/fc";
 import { RiKakaoTalkFill } from "react-icons/ri";
-import Image from "next/image";
 import ModalBase from "components/ModalBase";
+import Logo from "components/assets/Logo";
 
 interface LoginModalProps {
   isOpen: boolean;
@@ -14,7 +14,7 @@ export default function LoginModal({ isOpen, onClose }: LoginModalProps) {
   return (
     <ModalBase size="xl" isOpen={isOpen} onClose={onClose}>
       <Center my={3} gap={3}>
-        <Image src="/logo.svg" width={200} height={40} alt="logo" />
+        <Logo />
       </Center>
 
       <Center flexDirection="column">
@@ -32,8 +32,11 @@ export default function LoginModal({ isOpen, onClose }: LoginModalProps) {
           bgColor="white"
           p={8}
           boxShadow="lg"
-          _hover={{ bgColor: "gray.100" }}
-          _active={{ bgColor: "gray.200" }}
+          _hover={{
+            boxShadow: "xl",
+            transform: "translateY(-3px)",
+          }}
+          _active={{ bgColor: "gray.100" }}
         >
           Google
         </Button>
@@ -46,7 +49,10 @@ export default function LoginModal({ isOpen, onClose }: LoginModalProps) {
           bgColor="gray.800"
           color="white"
           boxShadow="lg"
-          _hover={{ bgColor: "gray.700" }}
+          _hover={{
+            boxShadow: "xl",
+            transform: "translateY(-3px)",
+          }}
           _active={{ bgColor: "gray.600" }}
         >
           Github
@@ -59,8 +65,11 @@ export default function LoginModal({ isOpen, onClose }: LoginModalProps) {
           fontSize="md"
           bgColor="yellow.300"
           boxShadow="lg"
-          _hover={{ bgColor: "yellow.400" }}
-          _active={{ bgColor: "yellow.500" }}
+          _hover={{
+            boxShadow: "xl",
+            transform: "translateY(-3px)",
+          }}
+          _active={{ bgColor: "yellow.400" }}
         >
           Kakao
         </Button>
