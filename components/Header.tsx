@@ -12,15 +12,15 @@ import {
   MenuDivider,
   Text,
 } from "@chakra-ui/react";
-import Modal from "components/Modal";
 import useToggle from "hooks/useToggle";
 import { GrLogout, GrUser } from "react-icons/gr";
+import LoginModal from "components/LoginModal";
 
 interface HeaderProps {}
 
 function Header({}: HeaderProps) {
   const [isLogged, setIsLogged] = useState(true);
-  const [modalOpen, toggleModal] = useToggle(false);
+  const [isModalOpen, toggleModal] = useToggle(false);
 
   const handleLogin = () => {
     setIsLogged(true);
@@ -38,7 +38,7 @@ function Header({}: HeaderProps) {
       justify="space-between"
       userSelect="none"
     >
-      <Image src="/logo.svg" width={130} height={40} alt="logo" />
+      <Image src="emblem.svg" width={40} height={40} alt="logo" />
 
       {isLogged ? (
         <Menu autoSelect={false}>
@@ -66,7 +66,7 @@ function Header({}: HeaderProps) {
           <Button size="md" onClick={toggleModal}>
             로그인
           </Button>
-          {/* <Modal isOpen={isOpen} onClose={onClose} /> */}
+          <LoginModal isOpen={isModalOpen} onClose={toggleModal} />
         </>
       )}
     </Flex>
