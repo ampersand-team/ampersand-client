@@ -240,7 +240,7 @@
     "@chakra-ui/shared-utils" "2.0.4"
     "@chakra-ui/spinner" "2.0.12"
 
-"@chakra-ui/anatomy@2.1.1":
+"@chakra-ui/anatomy@^2.1.1", "@chakra-ui/anatomy@2.1.1":
   "integrity" "sha512-LUHAoqJAgxAqmyckG5bUpBrfEo1FleEyY+1A8hkWciy58gZ+h3GoY9oBpHcdo7XdHPpy3G+3hieK/7i9NLwxAw=="
   "resolved" "https://registry.npmjs.org/@chakra-ui/anatomy/-/anatomy-2.1.1.tgz"
   "version" "2.1.1"
