@@ -25,12 +25,13 @@ export default function MyPage() {
     const file = event.target.files?.[0];
     if (file) {
       const reader = new FileReader();
+
+      reader.readAsDataURL(file);
       reader.onload = (e) => {
         if (e.target?.result) {
           setProfileImage(e.target.result as string);
         }
       };
-      reader.readAsDataURL(file);
     }
   };
   return (
