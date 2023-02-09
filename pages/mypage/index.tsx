@@ -10,7 +10,7 @@ import {
 } from "@chakra-ui/react";
 import Layout from "components/Layout";
 import { useRef, useState } from "react";
-import mypic from "../../picture.jpg";
+import defaultImage from "../../public/favicon.ico";
 
 export default function MyPage() {
   const [settable, isSettable] = useState(false);
@@ -45,7 +45,7 @@ export default function MyPage() {
           boxSize="200px"
           ref={imageRef}
           onClick={imageClick}
-          src={`${profileImage || mypic.src}`}
+          src={`${profileImage || defaultImage.src}`}
           alt="프로필 이미지"
           _hover={{ cursor: "pointer", opacity: 0.8 }}
           backgroundPosition="center"
@@ -58,12 +58,28 @@ export default function MyPage() {
           onChange={imageChange}
           style={{ display: "none" }}
         />
-        {/* <Wrap>
-          <WrapItem width="500px">
+        <Wrap width="300px" display="flex" flexDirection="column">
+          <WrapItem>
             <Text fontSize="xl">닉네임 : </Text>
-            <Input placeholder="히터빵" size="md" />
+            <Input placeholder="히터빵" width="70%" marginLeft="10px" />
           </WrapItem>
-        </Wrap> */}
+          <WrapItem
+            display="flex"
+            flexDirection="column"
+            justifyContent="center"
+            width="100%"
+            gap={2}
+          >
+            <Button width="100%">완료</Button>
+            <Button
+              backgroundColor="red.500"
+              _hover={{ opacity: 0.8 }}
+              width="100%"
+            >
+              회원탈퇴
+            </Button>
+          </WrapItem>
+        </Wrap>
       </Flex>
     </Layout>
   );
