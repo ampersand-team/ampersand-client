@@ -23,16 +23,16 @@ export default function MyPage() {
   };
   const imageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
-    if (file) {
-      const reader = new FileReader();
 
-      reader.readAsDataURL(file);
-      reader.onload = (e) => {
-        if (e.target?.result) {
-          setProfileImage(e.target.result as string);
-        }
-      };
-    }
+    if (!file) return;
+    const reader = new FileReader();
+
+    reader.readAsDataURL(file);
+    reader.onload = (e) => {
+      if (e.target?.result) {
+        setProfileImage(e.target.result as string);
+      }
+    };
   };
   return (
     <Layout>
