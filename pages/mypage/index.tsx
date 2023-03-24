@@ -9,6 +9,7 @@ import {
   Image,
 } from "@chakra-ui/react";
 import Layout from "components/Layout";
+
 import { useEffect, useRef, useState } from "react";
 import defaultImage from "../../public/favicon.ico";
 
