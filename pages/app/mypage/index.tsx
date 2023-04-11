@@ -10,7 +10,7 @@ import {
 } from "@chakra-ui/react";
 
 import { useRef, useState } from "react";
-import defaultImage from "../../public/favicon.ico";
+import defaultImage from "public/favicon.ico";
 
 export default function MyPage() {
   const [settable, isSettable] = useState(false);
