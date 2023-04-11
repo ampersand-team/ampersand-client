@@ -19,10 +19,10 @@ const baseStyle = definePartsStyle({
     py: "2",
     px: "4",
     _hover: {
-      bg: "gray.100",
+      bg: "gray.50",
     },
     _focus: {
-      bg: "gray.200",
+      bg: "gray.100",
     },
   },
 
