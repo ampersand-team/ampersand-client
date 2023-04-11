@@ -4,11 +4,11 @@ export default function () {
   return {};
 }
 
-export const getServerSideProps: GetServerSideProps = async () => {
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
   return {
     redirect: {
-      destination: "/app",
-      permanent: true,
+      destination: "/",
+      permanent: false,
     },
   };
 };

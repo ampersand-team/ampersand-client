@@ -14,7 +14,7 @@ const notoSans = Noto_Sans({
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <div className={notoSans.className}>
-      <NextNProgress options={{ showSpinner: false }} color="#e3e3e3" />
+      <NextNProgress options={{ showSpinner: false }} color="#c5c5c5" />
       <ChakraProvider theme={theme}>
         <Layout>
           <Component {...pageProps} />

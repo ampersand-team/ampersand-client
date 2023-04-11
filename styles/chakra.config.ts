@@ -212,7 +212,8 @@ const semanticTokens = {
 const config = {
   cssVarPrefix: "ampersand",
   initialColorMode: "light",
-  useSystemColorMode: true,
+
+  useSystemColorMode: false,
 };
 
 export const theme = extendTheme({
