@@ -1,10 +1,14 @@
-import { Text } from "@chakra-ui/react";
-import Layout from "components/Layout";
+import { GetServerSideProps } from "next";
 
-export default function Home() {
-  return (
-    <Layout>
-      <Text>Hello World</Text>
-    </Layout>
-  );
+export default function () {
+  return {};
 }
+
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
+  return {
+    redirect: {
+      destination: "/app",
+      permanent: true,
+    },
+  };
+};

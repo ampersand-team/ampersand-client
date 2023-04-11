@@ -19,7 +19,7 @@ import EmblemLogo from "components/assets/EmblemLogo";
 
 interface HeaderProps {}
 
-function Header({}: HeaderProps) {
+export function Header({}: HeaderProps) {
   const [isLogged, setIsLogged] = useState(true);
   const [isModalOpen, toggleModal] = useToggle(false);
 
@@ -75,5 +75,3 @@ function Header({}: HeaderProps) {
     </Flex>
   );
 }
-
-export default Header;

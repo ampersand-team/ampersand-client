@@ -1,28 +1,25 @@
-import { ReactNode } from "react";
 import Head from "next/head";
-import { Box } from "@chakra-ui/react";
-import Header from "components/Header";
+import { ReactNode } from "react";
+import { Flex } from "@chakra-ui/react";
+import { Header } from "components/Header";
 
 interface LayoutProps {
   children: ReactNode;
-  title?: string;
 }
 
-function Layout({ children, title = "ampersand" }: LayoutProps) {
+export function Layout({ children }: LayoutProps) {
   return (
     <>
       <Head>
-        <title>{title}</title>
         <meta name="description" content="ampersand client" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
+        <title>ampersand</title>
       </Head>
-      <Box w="full" h="full">
+      <Flex direction="column" w="full" h="full">
         <Header />
-        {children}
-      </Box>
+        <Flex as="main">{children}</Flex>
+      </Flex>
     </>
   );
 }
-
-export default Layout;
