@@ -35,7 +35,13 @@ export default function MyPage() {
     };
   };
   return (
-    <Flex flexDirection="column" align="center" marginTop="30px" gap="20px">
+    <Flex
+      flexDirection="column"
+      align="center"
+      marginTop="30px"
+      gap="20px"
+      margin="auto"
+    >
       <Heading as="h1" size="xl" noOfLines={1}>
         내 정보
       </Heading>
